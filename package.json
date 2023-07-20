@@ -2,7 +2,7 @@
   "name": "web-encriptor",
   "displayName": "Mi Extensión",
   "description": "Descripción de Mi Extensión",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "MiEditor",
   "icon": "./src/ico/icon.png",
   "engines": {
