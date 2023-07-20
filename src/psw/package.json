@@ -1,0 +1,19 @@
+{
+    "name": "psw",
+    "displayName": "icon for psw",
+    "version": "0.11.0",
+    "publisher": "owellandry",
+    "engines": {
+      "vscode": "^1.0.0"
+    },
+    "contributes": {
+      "iconThemes": [
+        {
+          "id": "psw",
+          "label": "psw",
+          "path": "./icons"
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Hello, world!</h1>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="../src/dist/conection.js"></script>
+  <script>
+    const socket = io();
+
+    // Función para recargar la página después de 1 segundo
+    function reloadAfterDelay() {
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000);
+    }
+
+    // Emitir un evento para indicar que el usuario ha escrito algo
+    function handleInputChange() {
+        socket.emit('inputChange');
+    }
+
+    // Escuchar el evento del servidor para recargar la página
+    socket.on('reloadPage', () => {
+        reloadAfterDelay();
+    });
+
+    // Asignar el evento de cambio de entrada a los campos de texto
+    const inputFields = document.querySelectorAll('input[type="text"]');
+    inputFields.forEach(input => {
+        input.addEventListener('input', handleInputChange);
+    });
+</script>
+</body>
+
+</html>
