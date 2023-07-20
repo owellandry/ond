@@ -1,6 +1,6 @@
 {
   "name": "ond",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Es un mini framework el cual se basa en la seguridad",
   "main": "main.js",
   "dependencies": {
