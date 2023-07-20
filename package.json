@@ -284,7 +284,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/owellandry/psw.git"
+    "url": "git+https://github.com/owellandry/ond.git"
   },
   "keywords": [
     "security",
@@ -295,7 +295,7 @@
   "author": "owellandry",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/owellandry/psw/issues"
+    "url": "https://github.com/owellandry/ond/issues"
   },
-  "homepage": "https://github.com/owellandry/psw#readme"
+  "homepage": "https://github.com/owellandry/ond#readme"
 }
