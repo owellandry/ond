@@ -1,6 +1,6 @@
 {
   "name": "psw",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Es un mini framework el cual se basa en la seguridad",
   "main": "main.js",
   "dependencies": {
