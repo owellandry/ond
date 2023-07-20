@@ -38,12 +38,25 @@ console.log('dbDatabase:', dbDatabase);
 
 const socket = io();
 
-// Emitir un evento para indicar que el usuario se conectó a la página
-socket.on('connect', () => {
-    console.log('Usuario conectado');
+// Función para recargar la página después de 1 segundo
+function reloadAfterDelay() {
+    setTimeout(() => {
+        window.location.reload();
+    }, 1000);
+}
+
+// Emitir un evento para indicar que el usuario ha escrito algo
+function handleInputChange() {
+    socket.emit('inputChange');
+}
+
+// Escuchar el evento del servidor para recargar la página
+socket.on('reloadPage', () => {
+    reloadAfterDelay();
 });
 
-// Emitir un evento para indicar que el usuario se desconectó de la página
-socket.on('disconnect', () => {
-    console.log('Usuario desconectado');
+// Asignar el evento de cambio de entrada a los campos de texto
+const inputFields = document.querySelectorAll('input[type="text"]');
+inputFields.forEach(input => {
+    input.addEventListener('input', handleInputChange);
 });
