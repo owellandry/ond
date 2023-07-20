@@ -18,7 +18,7 @@ const variables = {
 
 };
 
-// Cifrar los valores de las variables y escribirlos en el archivo .psw
+// Cifrar los valores de las variables y escribirlos en el archivo .ond
 let content = '';
 for (const variable in variables) {
   if (variables.hasOwnProperty(variable)) {
@@ -28,6 +28,6 @@ for (const variable in variables) {
   }
 }
 
-fs.writeFileSync('.psw', content, 'utf8');
+fs.writeFileSync('.ond', content, 'utf8');
 
-console.log('Archivo .psw creado y variables cifradas.');
+console.log('Archivo .ond creado y variables cifradas.');

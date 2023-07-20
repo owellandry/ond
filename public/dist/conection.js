@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const cryptoJS = require('crypto-js');
 
-// Leer el archivo .psw y desencriptar las variables de entorno
-const pswFilePath = path.join(__dirname, '..', '.psw');
+// Leer el archivo .ond y desencriptar las variables de entorno
+const pswFilePath = path.join(__dirname, '..', '.ond');
 const encryptedData = fs.readFileSync(pswFilePath, 'utf8');
 const decryptedData = cryptoJS.AES.decrypt(encryptedData, 'password-secreta').toString(cryptoJS.enc.Utf8);
 const envVariables = JSON.parse(decryptedData);

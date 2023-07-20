@@ -10,8 +10,8 @@ function decryptValue(encryptedValue) {
     return bytes.toString(crypto.enc.Utf8);
 }
 
-// Leer el contenido del archivo .psw
-const pswContent = fs.readFileSync('.psw', 'utf8');
+// Leer el contenido del archivo .ond
+const pswContent = fs.readFileSync('.ond', 'utf8');
 
 // Convertir el contenido en un objeto con las variables y sus valores cifrados
 const variables = {};
